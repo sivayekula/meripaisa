@@ -1,0 +1,17 @@
+# Render Blueprint: auto-deploys the backend (Docker) from this repo on every push to main.
+services:
+  - type: web
+    name: meripaisa-api
+    runtime: docker
+    plan: free
+    region: singapore            # closest Render region to India
+    branch: main
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    healthCheckPath: /health
+    autoDeployTrigger: checksPass   # deploy only after the GitHub Actions CI passes (use "commit" to skip waiting)
+    envVars:
+      - key: MONGO_URI
+        sync: false              # paste your MongoDB Atlas URI in the Render dashboard
+      - key: JWT_SECRET
+        generateValue: true      # Render generates a random secret

@@ -1,0 +1,17 @@
+export const SEED: { type: 'expense' | 'income'; name: string; subcategories: string[] }[] = [
+  { type: 'expense', name: 'Dairy', subcategories: ['Milk', 'Curd', 'Butter', 'Paneer', 'Ghee'] },
+  { type: 'expense', name: 'Groceries', subcategories: ['Rice', 'Vegetables', 'Fruits', 'Oil', 'Pulses'] },
+  { type: 'expense', name: 'Transport', subcategories: ['Fuel', 'Bus', 'Auto', 'Vehicle Service'] },
+  { type: 'expense', name: 'Bills', subcategories: ['Electricity', 'Water', 'Mobile', 'Internet', 'Gas'] },
+  { type: 'expense', name: 'Food', subcategories: ['Restaurant', 'Snacks', 'Tea/Coffee'] },
+  { type: 'expense', name: 'Health', subcategories: ['Medicines', 'Doctor', 'Tests'] },
+  { type: 'expense', name: 'Farming', subcategories: ['Seeds', 'Fertilizer', 'Labour', 'Pesticide', 'Irrigation'] },
+  { type: 'expense', name: 'Education', subcategories: ['Fees', 'Books'] },
+  { type: 'expense', name: 'Shopping', subcategories: ['Clothes', 'Electronics', 'Home'] },
+  { type: 'expense', name: 'Other', subcategories: [] },
+  { type: 'income', name: 'Salary', subcategories: ['Monthly Salary', 'Bonus'] },
+  { type: 'income', name: 'Farming', subcategories: ['Crop Sale', 'Milk Sale', 'Rent'] },
+  { type: 'income', name: 'Business', subcategories: ['Sales', 'Services'] },
+  { type: 'income', name: 'Investments', subcategories: ['Interest', 'Dividends'] },
+  { type: 'income', name: 'Other', subcategories: ['Gift', 'Refund'] },
+];

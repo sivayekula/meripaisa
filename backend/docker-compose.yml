@@ -1,0 +1,16 @@
+# Local run: docker compose up --build   (API on :3000, MongoDB on :27017)
+services:
+  mongo:
+    image: mongo:7
+    volumes: [mongo-data:/data/db]
+    ports: ["27017:27017"]
+  api:
+    build: .
+    depends_on: [mongo]
+    ports: ["3000:3000"]
+    environment:
+      PORT: 3000
+      MONGO_URI: mongodb://mongo:27017/meripaisa
+      JWT_SECRET: local-dev-secret-change-me
+volumes:
+  mongo-data:
